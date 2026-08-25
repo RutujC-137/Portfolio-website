@@ -45,11 +45,11 @@ tailwind.config={
 @keyframes textReveal{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
 @keyframes glowPulse{0%,100%{filter:drop-shadow(0 0 10px rgba(96,165,250,0.3))}50%{filter:drop-shadow(0 0 22px rgba(52,211,153,0.55))}}
 @keyframes letterFloat{0%{opacity:0;transform:translateY(16px) rotateX(20deg)}100%{opacity:1;transform:translateY(0) rotateX(0)}}
-.animated-gradient{background:linear-gradient(100deg,#60A5FA 0%,#34D399 33%,#F472B6 66%,#60A5FA 100%);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradientShift 4s ease infinite, glowPulse 3s ease infinite}
+.animated-gradient{color:#fff;-webkit-text-fill-color:#fff;background:none;animation:none}
 .reveal-name{animation:textReveal .9s cubic-bezier(.16,1,.3,1) both}
 .reveal-name-delay{animation:textReveal .9s cubic-bezier(.16,1,.3,1) .2s both}
 .letter{ display:inline-block; opacity:0; animation: letterFloat .6s cubic-bezier(.16,1,.3,1) forwards; }
-#anim-gangawane .letter{ background:linear-gradient(100deg,#60A5FA 0%,#34D399 33%,#F472B6 66%,#60A5FA 100%); background-size:300% 100%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation: letterFloat .6s cubic-bezier(.16,1,.3,1) forwards, gradientShift 4s ease infinite, glowPulse 3s ease infinite; }
+#anim-gangawane .letter{ color:#fff; -webkit-text-fill-color:#fff; background:none; animation: letterFloat .6s cubic-bezier(.16,1,.3,1) forwards; }
 /* LIGHT MODE OVERRIDES */
 html.light body{ background:#FCFCFD !important; color:#27272a !important; }
 html.light nav{ background:rgba(255,255,255,0.85) !important; border-color:#e4e4e7 !important; backdrop-filter:blur(12px) }
@@ -74,8 +74,8 @@ html.light .bg-white\/5{ background:#ffffff !important; border-color:#e4e4e7 !im
 html.light .bg-white\/10{ background:#f4f4f5 !important; }
 html.light .decoration-white\/20{ text-decoration-color:#d4d4d8 !important; }
 html.light .card-glow{ box-shadow:0 1px 3px rgba(0,0,0,0.06),0 4px 12px rgba(0,0,0,0.04) !important; }
-html.light #anim-rutuj{ color:#18181b !important; }
-html.light #anim-gangawane .letter{ filter:none !important; }
+html.light #anim-rutuj{ color:#18181b !important; -webkit-text-fill-color:#18181b !important; }
+html.light .animated-gradient, html.light #anim-gangawane, html.light #anim-gangawane .letter{ color:#18181b !important; -webkit-text-fill-color:#18181b !important; background:none !important; filter:none !important; }
 </style>
 </head>
 <body class="bg-black text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
