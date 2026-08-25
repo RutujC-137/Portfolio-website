@@ -311,17 +311,16 @@ html.light footer .bg-white:hover{ background:#000 !important; }
   </div>
 
   <div class="relative">
-    <div class="hidden lg:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 gap-2">
+    <div class="hidden lg:flex absolute -left-12 top-1/2 -translate-y-1/2 z-20">
       <button id="prevBtn" aria-label="Previous" class="w-10 h-10 rounded-full bg-white border border-zinc-200 shadow grid place-items-center hover:bg-zinc-50 transition"><i data-lucide="chevron-left" class="w-5 h-5 text-zinc-700"></i></button>
     </div>
-    <div class="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10">
+    <div class="hidden lg:flex absolute -right-12 top-1/2 -translate-y-1/2 z-20">
       <button id="nextBtn" aria-label="Next" class="w-10 h-10 rounded-full bg-zinc-900 text-white shadow grid place-items-center hover:bg-black transition"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
     </div>
-    <!-- Mobile swipe hint -->
-    <div class="flex lg:hidden justify-center gap-2 mb-3 text-[11px] font-bold tracking-widest text-zinc-400 uppercase"><span>← Swipe →</span></div>
-    <div id="projectCarousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-2" style="scroll-padding: 0 24px;">
+    <div class="flex lg:hidden justify-center gap-2 mb-3 text-[11px] font-bold tracking-widest text-zinc-400 uppercase"><span>← Swipe card →</span></div>
+    <div id="projectDeck" class="relative w-full max-w-[420px] mx-auto h-[460px] select-none touch-none">
 
-    <article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-white rounded-[24px] snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] border border-zinc-200 overflow-hidden flex flex-col card-glow">
+    <article class="reveal group deck-card cursor-grab active:cursor-grabbing absolute inset-0 bg-white rounded-[24px] absolute inset-0 border border-zinc-200 overflow-hidden flex flex-col card-glow">
       <div class="h-40 bg-gradient-to-br from-[#0B1220] via-[#1E3A7A] to-[#00E5CC] p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-110 transition duration-700"></div>
@@ -340,7 +339,7 @@ html.light footer .bg-white:hover{ background:#000 !important; }
       </div>
     </article>
 
-        <article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-zinc-900/50 backdrop-blur rounded-[24px] border border-white/10 overflow-hidden flex flex-col card-glow hover:border-white/20 transition" style="transition-delay:40ms">
+        <article class="reveal group deck-card cursor-grab active:cursor-grabbing absolute inset-0 bg-zinc-900/50 backdrop-blur rounded-[24px] border border-white/10 overflow-hidden flex flex-col card-glow hover:border-white/20 transition" style="transition-delay:40ms">
       <div class="h-40 bg-gradient-to-br from-emerald-600 via-teal-500 to-cyan-500 p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <span class="relative inline-flex w-fit px-2.5 py-1 rounded-full bg-black/30 backdrop-blur text-white text-[11px] font-bold border border-white/20">2 Months • Agentic AI</span>
@@ -358,7 +357,7 @@ html.light footer .bg-white:hover{ background:#000 !important; }
       </div>
     </article>
 
-    <article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow" style="transition-delay:80ms">
+    <article class="reveal group deck-card cursor-grab active:cursor-grabbing absolute inset-0 bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow" style="transition-delay:80ms">
       <div class="h-40 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <span class="relative inline-flex w-fit px-2.5 py-1 rounded-full bg-black/30 backdrop-blur text-white text-[11px] font-bold border border-white/20">3D • Interactive</span>
@@ -376,7 +375,7 @@ html.light footer .bg-white:hover{ background:#000 !important; }
       </div>
     </article>
 
-<article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-zinc-900/50 backdrop-blur rounded-[24px] border border-white/10 overflow-hidden flex flex-col card-glow hover:border-white/20 transition" style="transition-delay:80ms">
+<article class="reveal group deck-card cursor-grab active:cursor-grabbing absolute inset-0 bg-zinc-900/50 backdrop-blur rounded-[24px] border border-white/10 overflow-hidden flex flex-col card-glow hover:border-white/20 transition" style="transition-delay:80ms">
       <div class="h-40 bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-500 p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <span class="relative inline-flex w-fit px-2.5 py-1 rounded-full bg-black/30 backdrop-blur text-white text-[11px] font-bold border border-white/20">6 Months • B.E. Final Year</span>
@@ -393,7 +392,7 @@ html.light footer .bg-white:hover{ background:#000 !important; }
       </div>
     </article>
 
-    <article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow" style="transition-delay:160ms">
+    <article class="reveal group deck-card cursor-grab active:cursor-grabbing absolute inset-0 bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow" style="transition-delay:160ms">
       <div class="h-40 bg-gradient-to-br from-rose-600 via-orange-500 to-yellow-400 p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <span class="relative inline-flex w-fit px-2.5 py-1 rounded-full bg-black/30 backdrop-blur text-white text-[11px] font-bold border border-white/20">4 Months • Deep Learning</span>
@@ -610,76 +609,137 @@ function splitLetters(id, delayStep=70, baseDelay=300){
 }
 splitLetters('anim-rutuj', 80, 200);
 splitLetters('anim-gangawane', 70, 500);
-// Tinder-like swipe carousel for Projects
+// Tinder deck - stacked, loop, swipe right=next, left=prev (mouse + thumb)
 (function(){
-  const carousel = document.getElementById('projectCarousel');
+  const deck = document.getElementById('projectDeck');
+  if(!deck) return;
+  const cards = Array.from(deck.querySelectorAll('.deck-card'));
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const prevM = document.getElementById('prevBtnMobile');
   const nextM = document.getElementById('nextBtnMobile');
   const dotsContainer = document.getElementById('carouselDots');
-  if(!carousel) return;
-  const cards = carousel.querySelectorAll('article');
+  let current = 0;
+  const total = cards.length;
+
   // create dots
+  dotsContainer.innerHTML='';
   cards.forEach((_,i)=>{
-    const dot = document.createElement('button');
-    dot.className = 'w-2 h-2 rounded-full transition ' + (i===0 ? 'bg-zinc-900 w-6' : 'bg-zinc-300');
-    dot.setAttribute('aria-label','Go to slide '+(i+1));
-    dot.addEventListener('click', ()=> {
-      cards[i].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
-    });
+    const dot=document.createElement('button');
+    dot.className='w-2 h-2 rounded-full transition ' + (i===0?'bg-zinc-900 w-6':'bg-zinc-300');
+    dot.setAttribute('aria-label','Go to '+ (i+1));
+    dot.addEventListener('click', ()=> goTo(i));
     dotsContainer.appendChild(dot);
   });
   const dots = dotsContainer.querySelectorAll('button');
-  function updateDots(){
-    const scrollLeft = carousel.scrollLeft;
-    const cardWidth = cards[0].offsetWidth + 24; // gap 24
-    const idx = Math.round(scrollLeft / cardWidth);
-    dots.forEach((d,i)=> {
-      d.className = i===idx ? 'w-6 h-2 rounded-full bg-zinc-900 transition' : 'w-2 h-2 rounded-full bg-zinc-300 transition';
+
+  function layout(){
+    cards.forEach((card,i)=>{
+      const offset = (i - current + total) % total;
+      // stack: current on top, next ones slightly scaled and offset
+      if(offset===0){
+        card.style.transform='translate(0,0) scale(1) rotate(0deg)';
+        card.style.zIndex=10;
+        card.style.opacity='1';
+        card.style.pointerEvents='auto';
+      } else if(offset===1){
+        card.style.transform='translate(0,8px) scale(0.97) rotate(0deg)';
+        card.style.zIndex=9;
+        card.style.opacity='0.9';
+        card.style.pointerEvents='none';
+      } else if(offset===2){
+        card.style.transform='translate(0,16px) scale(0.94) rotate(0deg)';
+        card.style.zIndex=8;
+        card.style.opacity='0.7';
+        card.style.pointerEvents='none';
+      } else {
+        card.style.transform='translate(0,24px) scale(0.91) rotate(0deg)';
+        card.style.zIndex=7 - offset;
+        card.style.opacity='0';
+        card.style.pointerEvents='none';
+      }
+      card.style.transition='transform 0.45s cubic-bezier(.16,1,.3,1), opacity 0.35s';
     });
+    dots.forEach((d,i)=>{ d.className = i===current ? 'w-6 h-2 rounded-full bg-zinc-900 transition' : 'w-2 h-2 rounded-full bg-zinc-300 transition'; });
   }
-  carousel.addEventListener('scroll', updateDots);
-  function scrollByCard(dir){
-    const cardWidth = cards[0].offsetWidth + 24;
-    carousel.scrollBy({left: dir * cardWidth, behavior:'smooth'});
+
+  function goTo(idx){
+    current = (idx + total) % total;
+    layout();
   }
-  prevBtn?.addEventListener('click', ()=> scrollByCard(-1));
-  nextBtn?.addEventListener('click', ()=> scrollByCard(1));
-  prevM?.addEventListener('click', ()=> scrollByCard(-1));
-  nextM?.addEventListener('click', ()=> scrollByCard(1));
-  // Tinder-like drag
-  let isDown=false, startX, scrollLeft, startTime;
-  carousel.addEventListener('mousedown', (e)=>{ isDown=true; carousel.classList.add('cursor-grabbing'); startX=e.pageX - carousel.offsetLeft; scrollLeft=carousel.scrollLeft; startTime=Date.now(); });
-  carousel.addEventListener('mouseleave', ()=>{ isDown=false; carousel.classList.remove('cursor-grabbing'); });
-  carousel.addEventListener('mouseup', (e)=>{
-    if(!isDown) return;
-    isDown=false; carousel.classList.remove('cursor-grabbing');
-    const x=e.pageX - carousel.offsetLeft;
-    const walk=(x - startX);
+  function next(){ goTo(current+1); }
+  function prev(){ goTo(current-1); }
+
+  prevBtn?.addEventListener('click', prev);
+  nextBtn?.addEventListener('click', next);
+  prevM?.addEventListener('click', prev);
+  nextM?.addEventListener('click', next);
+
+  // swipe on top card
+  let startX=0, startY=0, isDragging=false, startTime=0;
+  let currentCard = null;
+
+  function getTopCard(){ return cards[current]; }
+
+  function onStart(x,y){
+    isDragging=true;
+    startX=x; startY=y; startTime=Date.now();
+    currentCard=getTopCard();
+    if(currentCard) currentCard.style.transition='none';
+  }
+  function onMove(x,y){
+    if(!isDragging || !currentCard) return;
+    const dx=x - startX;
+    const dy=y - startY;
+    if(Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+    const rotate = dx * 0.08;
+    currentCard.style.transform=`translate(${dx}px, ${dy*0.15}px) rotate(${rotate}deg)`;
+    currentCard.style.opacity= String(1 - Math.min(Math.abs(dx)/400, 0.3));
+  }
+  function onEnd(x,y){
+    if(!isDragging || !currentCard) return;
+    isDragging=false;
+    const dx=x - startX;
     const elapsed=Date.now()-startTime;
-    if(Math.abs(walk) > 80 || (Math.abs(walk) > 40 && elapsed < 200)){
-      if(walk < 0) scrollByCard(1); else scrollByCard(-1);
+    const threshold = 90;
+    const velocity = Math.abs(dx)/Math.max(elapsed,1);
+    currentCard.style.transition='transform 0.45s cubic-bezier(.16,1,.3,1), opacity 0.35s';
+    if(Math.abs(dx) > threshold || (Math.abs(dx) > 50 && velocity > 0.4)){
+      // right swipe = next, left swipe = prev (as requested)
+      if(dx > 0){
+        // right swipe -> next
+        currentCard.style.transform=`translate(420px, 0) rotate(18deg)`;
+        currentCard.style.opacity='0';
+        setTimeout(()=>{ next(); }, 220);
+      } else {
+        // left swipe -> prev
+        currentCard.style.transform=`translate(-420px, 0) rotate(-18deg)`;
+        currentCard.style.opacity='0';
+        setTimeout(()=>{ prev(); }, 220);
+      }
+    } else {
+      // snap back
+      layout();
     }
-  });
-  carousel.addEventListener('mousemove', (e)=>{
-    if(!isDown) return;
-    e.preventDefault();
-    const x=e.pageX - carousel.offsetLeft;
-    const walk=(x - startX);
-    carousel.scrollLeft=scrollLeft - walk;
-  });
+    currentCard=null;
+  }
+
+  // mouse
+  deck.addEventListener('mousedown', e=>{ onStart(e.clientX, e.clientY); });
+  window.addEventListener('mousemove', e=>{ if(isDragging) onMove(e.clientX, e.clientY); });
+  window.addEventListener('mouseup', e=>{ if(isDragging) onEnd(e.clientX, e.clientY); });
   // touch
-  let touchStartX=0, touchScrollLeft=0, touchStartTime=0;
-  carousel.addEventListener('touchstart', (e)=>{ touchStartX=e.touches[0].pageX - carousel.offsetLeft; touchScrollLeft=carousel.scrollLeft; touchStartTime=Date.now(); }, {passive:true});
-  carousel.addEventListener('touchend', (e)=>{
-    const x=e.changedTouches[0].pageX - carousel.offsetLeft;
-    const walk=x - touchStartX;
-    const elapsed=Date.now()-touchStartTime;
-    if(Math.abs(walk) > 60 || (Math.abs(walk) > 30 && elapsed < 250)){
-      if(walk < 0) scrollByCard(1); else scrollByCard(-1);
-    }
+  deck.addEventListener('touchstart', e=>{ onStart(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+  deck.addEventListener('touchmove', e=>{ if(isDragging) onMove(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+  deck.addEventListener('touchend', e=>{ const t=e.changedTouches[0]; if(t) onEnd(t.clientX, t.clientY); });
+
+  // keyboard
+  window.addEventListener('keydown', e=>{
+    if(e.key==='ArrowRight') next();
+    if(e.key==='ArrowLeft') prev();
   });
+
+  layout();
   lucide.createIcons();
 })();
 // fix FormSubmit file:// issue - use mailto when opened as local file
