@@ -78,6 +78,7 @@ html.light #anim-rutuj{ color:#18181b !important; -webkit-text-fill-color:#18181
 html.light .animated-gradient, html.light #anim-gangawane, html.light #anim-gangawane .letter{ color:#18181b !important; -webkit-text-fill-color:#18181b !important; background:none !important; filter:none !important; }
 html.light footer .bg-white{ background:#18181b !important; color:#fff !important; border-color:#18181b !important; }
 html.light footer .bg-white:hover{ background:#000 !important; }
+  .scrollbar-hide{ -ms-overflow-style:none; scrollbar-width:none; } .scrollbar-hide::-webkit-scrollbar{ display:none; }
 </style>
 </head>
 <body class="bg-black text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
@@ -309,8 +310,18 @@ html.light footer .bg-white:hover{ background:#000 !important; }
     <a href="https://github.com/RutujC-137" target="_blank" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-white">View all on GitHub <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
   </div>
 
-  <div class="mt-6 grid lg:grid-cols-3 gap-6">
-    <article class="reveal group bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow">
+  <div class="relative">
+    <div class="hidden lg:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 gap-2">
+      <button id="prevBtn" aria-label="Previous" class="w-10 h-10 rounded-full bg-white border border-zinc-200 shadow grid place-items-center hover:bg-zinc-50 transition"><i data-lucide="chevron-left" class="w-5 h-5 text-zinc-700"></i></button>
+    </div>
+    <div class="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10">
+      <button id="nextBtn" aria-label="Next" class="w-10 h-10 rounded-full bg-zinc-900 text-white shadow grid place-items-center hover:bg-black transition"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+    </div>
+    <!-- Mobile swipe hint -->
+    <div class="flex lg:hidden justify-center gap-2 mb-3 text-[11px] font-bold tracking-widest text-zinc-400 uppercase"><span>← Swipe →</span></div>
+    <div id="projectCarousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-2" style="scroll-padding: 0 24px;">
+
+    <article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-white rounded-[24px] snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] border border-zinc-200 overflow-hidden flex flex-col card-glow">
       <div class="h-40 bg-gradient-to-br from-[#0B1220] via-[#1E3A7A] to-[#00E5CC] p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-110 transition duration-700"></div>
@@ -329,7 +340,7 @@ html.light footer .bg-white:hover{ background:#000 !important; }
       </div>
     </article>
 
-        <article class="reveal group bg-zinc-900/50 backdrop-blur rounded-[24px] border border-white/10 overflow-hidden flex flex-col card-glow hover:border-white/20 transition" style="transition-delay:40ms">
+        <article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-zinc-900/50 backdrop-blur rounded-[24px] border border-white/10 overflow-hidden flex flex-col card-glow hover:border-white/20 transition" style="transition-delay:40ms">
       <div class="h-40 bg-gradient-to-br from-emerald-600 via-teal-500 to-cyan-500 p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <span class="relative inline-flex w-fit px-2.5 py-1 rounded-full bg-black/30 backdrop-blur text-white text-[11px] font-bold border border-white/20">2 Months • Agentic AI</span>
@@ -347,7 +358,7 @@ html.light footer .bg-white:hover{ background:#000 !important; }
       </div>
     </article>
 
-    <article class="reveal group bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow" style="transition-delay:80ms">
+    <article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow" style="transition-delay:80ms">
       <div class="h-40 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <span class="relative inline-flex w-fit px-2.5 py-1 rounded-full bg-black/30 backdrop-blur text-white text-[11px] font-bold border border-white/20">3D • Interactive</span>
@@ -365,7 +376,7 @@ html.light footer .bg-white:hover{ background:#000 !important; }
       </div>
     </article>
 
-<article class="reveal group bg-zinc-900/50 backdrop-blur rounded-[24px] border border-white/10 overflow-hidden flex flex-col card-glow hover:border-white/20 transition" style="transition-delay:80ms">
+<article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-zinc-900/50 backdrop-blur rounded-[24px] border border-white/10 overflow-hidden flex flex-col card-glow hover:border-white/20 transition" style="transition-delay:80ms">
       <div class="h-40 bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-500 p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <span class="relative inline-flex w-fit px-2.5 py-1 rounded-full bg-black/30 backdrop-blur text-white text-[11px] font-bold border border-white/20">6 Months • B.E. Final Year</span>
@@ -382,7 +393,7 @@ html.light footer .bg-white:hover{ background:#000 !important; }
       </div>
     </article>
 
-    <article class="reveal group bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow" style="transition-delay:160ms">
+    <article class="reveal group snap-center shrink-0 min-w-[85vw] sm:min-w-[380px] lg:min-w-[360px] max-w-[380px] bg-white rounded-[24px] border border-zinc-200 overflow-hidden flex flex-col card-glow" style="transition-delay:160ms">
       <div class="h-40 bg-gradient-to-br from-rose-600 via-orange-500 to-yellow-400 p-5 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <span class="relative inline-flex w-fit px-2.5 py-1 rounded-full bg-black/30 backdrop-blur text-white text-[11px] font-bold border border-white/20">4 Months • Deep Learning</span>
@@ -399,6 +410,12 @@ html.light footer .bg-white:hover{ background:#000 !important; }
         <a href="https://github.com/RutujC-137/Facial-Recognition" target="_blank" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-zinc-900 hover:text-orange-600 transition">View repository <i data-lucide="external-link" class="w-4 h-4"></i></a>
       </div>
     </article>
+    </div>
+    <div class="flex justify-center items-center gap-3 mt-6">
+      <button id="prevBtnMobile" class="lg:hidden w-9 h-9 rounded-full bg-white border border-zinc-200 grid place-items-center"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+      <div id="carouselDots" class="flex gap-1.5"></div>
+      <button id="nextBtnMobile" class="lg:hidden w-9 h-9 rounded-full bg-zinc-900 text-white grid place-items-center"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+    </div>
   </div>
 </section>
 
@@ -593,6 +610,78 @@ function splitLetters(id, delayStep=70, baseDelay=300){
 }
 splitLetters('anim-rutuj', 80, 200);
 splitLetters('anim-gangawane', 70, 500);
+// Tinder-like swipe carousel for Projects
+(function(){
+  const carousel = document.getElementById('projectCarousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevM = document.getElementById('prevBtnMobile');
+  const nextM = document.getElementById('nextBtnMobile');
+  const dotsContainer = document.getElementById('carouselDots');
+  if(!carousel) return;
+  const cards = carousel.querySelectorAll('article');
+  // create dots
+  cards.forEach((_,i)=>{
+    const dot = document.createElement('button');
+    dot.className = 'w-2 h-2 rounded-full transition ' + (i===0 ? 'bg-zinc-900 w-6' : 'bg-zinc-300');
+    dot.setAttribute('aria-label','Go to slide '+(i+1));
+    dot.addEventListener('click', ()=> {
+      cards[i].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+    });
+    dotsContainer.appendChild(dot);
+  });
+  const dots = dotsContainer.querySelectorAll('button');
+  function updateDots(){
+    const scrollLeft = carousel.scrollLeft;
+    const cardWidth = cards[0].offsetWidth + 24; // gap 24
+    const idx = Math.round(scrollLeft / cardWidth);
+    dots.forEach((d,i)=> {
+      d.className = i===idx ? 'w-6 h-2 rounded-full bg-zinc-900 transition' : 'w-2 h-2 rounded-full bg-zinc-300 transition';
+    });
+  }
+  carousel.addEventListener('scroll', updateDots);
+  function scrollByCard(dir){
+    const cardWidth = cards[0].offsetWidth + 24;
+    carousel.scrollBy({left: dir * cardWidth, behavior:'smooth'});
+  }
+  prevBtn?.addEventListener('click', ()=> scrollByCard(-1));
+  nextBtn?.addEventListener('click', ()=> scrollByCard(1));
+  prevM?.addEventListener('click', ()=> scrollByCard(-1));
+  nextM?.addEventListener('click', ()=> scrollByCard(1));
+  // Tinder-like drag
+  let isDown=false, startX, scrollLeft, startTime;
+  carousel.addEventListener('mousedown', (e)=>{ isDown=true; carousel.classList.add('cursor-grabbing'); startX=e.pageX - carousel.offsetLeft; scrollLeft=carousel.scrollLeft; startTime=Date.now(); });
+  carousel.addEventListener('mouseleave', ()=>{ isDown=false; carousel.classList.remove('cursor-grabbing'); });
+  carousel.addEventListener('mouseup', (e)=>{
+    if(!isDown) return;
+    isDown=false; carousel.classList.remove('cursor-grabbing');
+    const x=e.pageX - carousel.offsetLeft;
+    const walk=(x - startX);
+    const elapsed=Date.now()-startTime;
+    if(Math.abs(walk) > 80 || (Math.abs(walk) > 40 && elapsed < 200)){
+      if(walk < 0) scrollByCard(1); else scrollByCard(-1);
+    }
+  });
+  carousel.addEventListener('mousemove', (e)=>{
+    if(!isDown) return;
+    e.preventDefault();
+    const x=e.pageX - carousel.offsetLeft;
+    const walk=(x - startX);
+    carousel.scrollLeft=scrollLeft - walk;
+  });
+  // touch
+  let touchStartX=0, touchScrollLeft=0, touchStartTime=0;
+  carousel.addEventListener('touchstart', (e)=>{ touchStartX=e.touches[0].pageX - carousel.offsetLeft; touchScrollLeft=carousel.scrollLeft; touchStartTime=Date.now(); }, {passive:true});
+  carousel.addEventListener('touchend', (e)=>{
+    const x=e.changedTouches[0].pageX - carousel.offsetLeft;
+    const walk=x - touchStartX;
+    const elapsed=Date.now()-touchStartTime;
+    if(Math.abs(walk) > 60 || (Math.abs(walk) > 30 && elapsed < 250)){
+      if(walk < 0) scrollByCard(1); else scrollByCard(-1);
+    }
+  });
+  lucide.createIcons();
+})();
 // fix FormSubmit file:// issue - use mailto when opened as local file
 document.getElementById('contactForm')?.addEventListener('submit', function(e){
   if(location.protocol === 'file:'){
