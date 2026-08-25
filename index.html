@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rutuj Gangawane — Data Analyst • Cloud DevOps • Machine Learning</title>
+<meta name="description" content="Portfolio of Rutuj Gangawane — Data Analyst, Cloud DevOps & ML Engineer from Pune. AWS, Python, Spark, PyTorch. PG-DBDA C-DAC, B.E. Computer Engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Plus Jakarta Sans','sans-serif'],
+          mono: ['JetBrains Mono','monospace'],
+        },
+        colors: {
+          brand: {
+            900: '#0F2040',
+            800: '#162A5A',
+            700: '#1E3A7A',
+            600: '#2A4FA0',
+            500: '#3B6CCF',
+            50: '#EEF2FF',
+          },
+          accent: '#00D1B2',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .glass { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+  .text-gradient { background: linear-gradient(90deg,#3B6CCF 0%, #00D1B2 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .card-shadow { box-shadow: 0 8px 30px rgba(15,32,64,0.06), 0 1px 3px rgba(15,32,64,0.08); }
+  .card-shadow:hover { box-shadow: 0 16px 40px rgba(15,32,64,0.10), 0 4px 12px rgba(15,32,64,0.10); }
+  @keyframes float { 0%,100%{ transform: translateY(0)} 50%{ transform: translateY(-8px)} }
+</style>
+</head>
+<body class="bg-black text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+<!-- NAV -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/70 glass border-b border-slate-200/60">
+  <div class="max-w-[1160px] mx-auto px-6 lg:px-8 h-[68px] flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-brand-900 flex items-center justify-center text-white font-extrabold text-[15px] tracking-tight">RG</div>
+      <span class="font-bold text-[16px] tracking-tight text-brand-900">RUTUJ<span class="font-normal text-slate-500">.dev</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-[13.5px] font-medium text-slate-600">
+      <a href="#about" class="hover:text-brand-700 transition">About</a>
+      <a href="#experience" class="hover:text-brand-700 transition">Experience</a>
+      <a href="#skills" class="hover:text-brand-700 transition">Skills</a>
+      <a href="#projects" class="hover:text-brand-700 transition">Projects</a>
+      <a href="#education" class="hover:text-brand-700 transition">Education</a>
+      <a href="#contact" class="ml-2 px-5 py-2.5 rounded-full bg-brand-900 text-white font-semibold text-[13px] hover:bg-brand-800 transition flex items-center gap-2">Let's Talk <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+    </div>
+    <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 px-6 py-4 flex-col gap-3">
+    <a href="#about" class="py-2 text-sm font-medium">About</a>
+    <a href="#experience" class="py-2 text-sm font-medium">Experience</a>
+    <a href="#skills" class="py-2 text-sm font-medium">Skills</a>
+    <a href="#projects" class="py-2 text-sm font-medium">Projects</a>
+    <a href="#contact" class="mt-2 inline-flex justify-center px-5 py-2.5 rounded-full bg-brand-900 text-white font-semibold">Let's Talk</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-[68px] relative overflow-hidden">
+  <!-- background -->
+  <div class="absolute inset-0 bg-black"></div>
+  <div class="absolute -top-24 -right-24 w-[520px] h-[520px] bg-brand-500/15 rounded-full blur-[80px] pointer-events-none"></div>
+  <div class="absolute top-40 -left-32 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+  <div class="relative max-w-[1160px] mx-auto px-6 lg:px-8 py-10 lg:py-16">
+    <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
+      <!-- left -->
+      <div>
+
+        <h1 class="mt-2 font-extrabold leading-[0.95] tracking-[-0.04em] text-white">
+          <span class="block text-[14px] font-bold tracking-[0.18em] text-brand-500 mb-3">DATA ANALYST • CLOUD DEVOPS • MACHINE LEARNING</span>
+          <span class="block text-[44px] lg:text-[56px]">Rutuj</span>
+          <span class="block text-[44px] lg:text-[56px] text-gradient">Gangawane</span>
+        </h1>
+        <p class="mt-5 text-[16px] lg:text-[17px] leading-7 text-slate-300 max-w-[560px]">
+          Results-driven engineer with <span class="font-semibold text-white">PG-DBDA from C-DAC</span> and B.E. in Computer Engineering. I architect CI/CD on AWS, turn messy datasets into actionable insights, and ship ML models to production.
+        </p>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#projects" class="px-7 py-3.5 rounded-full bg-brand-900 text-white font-semibold text-sm inline-flex items-center gap-2 hover:bg-brand-800 transition">View Projects <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="Rutuj_Gangawane_Resume (1).pdf" download class="px-7 py-3.5 rounded-full bg-white border border-slate-200 font-semibold text-sm inline-flex items-center gap-2 hover:bg-slate-50 transition text-slate-700"><i data-lucide="download" class="w-4 h-4"></i> Download CV</a>
+          <a href="https://github.com/RutujC-137" target="_blank" class="w-[48px] h-[48px] rounded-full bg-white border border-slate-200 grid place-items-center hover:bg-slate-50 transition"><i data-lucide="github" class="w-5 h-5"></i></a>
+          <a href="https://linkedin.com/in/rutuj-gangawane" target="_blank" class="w-[48px] h-[48px] rounded-full bg-white border border-slate-200 grid place-items-center hover:bg-slate-50 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6 text-xs font-medium text-slate-400">
+          <span class="inline-flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Kalewadi, Pune</span>
+          <span class="inline-flex items-center gap-1.5"><i data-lucide="cake" class="w-3.5 h-3.5"></i> 24 May 2002</span>
+          <a href="https://github.com/RutujC-137" target="_blank" class="inline-flex items-center gap-1.5 hover:text-white transition underline underline-offset-4"><i data-lucide="mail" class="w-3.5 h-3.5"></i> github.com/RutujC-137</a>
+        </div>
+      </div>
+
+      <!-- right card -->
+      <div class="relative lg:pl-6">
+        <div class="relative bg-white rounded-[28px] card-shadow border border-slate-200 p-6 lg:p-7 overflow-hidden">
+          <div class="absolute top-0 inset-x-0 h-[4px] bg-gradient-to-r from-brand-600 to-accent"></div>
+          <!-- profile row -->
+          <div class="flex items-start gap-4">
+            <div class="w-[72px] h-[72px] rounded-2xl bg-gradient-to-br from-brand-900 to-brand-600 flex items-center justify-center text-white font-extrabold text-xl shrink-0">RG</div>
+            <div class="flex-1">
+              <h3 class="font-bold text-[17px] text-brand-900 leading-tight">Rutuj Gangawane</h3>
+              <p class="text-[12.5px] font-medium text-slate-500">Data Analyst • Cloud DevOps</p>
+              <div class="mt-2 flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">Open to Work</span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-900 text-white text-[11px] font-bold">PG-DBDA • 70.3% B.E.</span>
+              </div>
+            </div>
+            <span class="hidden sm:grid w-8 h-8 rounded-full bg-slate-50 border border-slate-200 place-items-center"><i data-lucide="sparkles" class="w-4 h-4 text-brand-600"></i></span>
+          </div>
+
+          <!-- stats -->
+          <div class="mt-6 grid grid-cols-3 gap-3">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3.5 text-center">
+              <div class="text-[20px] font-extrabold text-brand-900">2+</div>
+              <div class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Internships</div>
+            </div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3.5 text-center">
+              <div class="text-[20px] font-extrabold text-brand-900">3</div>
+              <div class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">ML Projects</div>
+            </div>
+            <div class="rounded-2xl bg-brand-900 p-3.5 text-center text-white">
+              <div class="text-[20px] font-extrabold">AWS</div>
+              <div class="text-[10px] font-bold tracking-widest text-white/70 uppercase">Certified Stack</div>
+            </div>
+          </div>
+
+          <!-- highlight -->
+          <div class="mt-5 rounded-2xl bg-[#F1F5FF] border border-[#DCE6FF] p-4 flex gap-3">
+            <div class="w-9 h-9 rounded-xl bg-white border border-[#DCE6FF] grid place-items-center shrink-0"><i data-lucide="rocket" class="w-4 h-4 text-brand-600"></i></div>
+            <div>
+              <div class="text-[13px] font-bold text-brand-900">Shipped 3-tier CI/CD on EC2</div>
+              <div class="text-[12px] leading-5 text-slate-600">GitHub → CodePipeline → CodeBuild → CodeDeploy → PM2 • Zero manual deploys</div>
+            </div>
+          </div>
+
+          <div class="mt-5 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <a href="https://github.com/RutujC-137" target="_blank" class="hover:text-brand-700 hover:underline underline-offset-4">github.com/RutujC-137</a>
+            <span class="inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Available now</span>
+          </div>
+        </div>
+
+        <!-- floating badges -->
+        <div class="hidden lg:flex absolute -left-2 top-[38%] bg-white border border-slate-200 rounded-full px-3 py-1.5 items-center gap-2 shadow-lg text-xs font-semibold">
+          <span class="w-7 h-7 rounded-full bg-orange-100 grid place-items-center text-[14px]">☁️</span> AWS EC2 &bull; S3 &bull; IAM
+        </div>
+        <div class="hidden lg:flex absolute -right-3 bottom-[18%] bg-white border border-slate-200 rounded-full px-3 py-1.5 items-center gap-2 shadow-lg text-xs font-semibold">
+          <span class="w-7 h-7 rounded-full bg-violet-100 grid place-items-center"><i data-lucide="brain" class="w-4 h-4 text-violet-600"></i></span> PyTorch • XGBoost
+        </div>
+      </div>
+    </div>
+
+    <!-- trusted strip -->
+    <div class="mt-10 lg:mt-14 border-t border-white/10 pt-6 flex flex-wrap items-center gap-3 text-[12px] font-semibold tracking-wide text-white/50 uppercase">
+      <span>Tech I work with</span>
+      <span class="hidden sm:inline text-white/20">—</span>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 normal-case tracking-normal text-[12px]">Python</span>
+        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 normal-case tracking-normal text-[12px]">AWS</span>
+        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 normal-case tracking-normal text-[12px]">React • Next.js</span>
+        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 normal-case tracking-normal text-[12px]">Spark • PySpark</span>
+        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 normal-case tracking-normal text-[12px]">Tableau • Power BI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-[1160px] mx-auto px-6 lg:px-8 py-10">
+  <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-6">
+    <div class="bg-white rounded-[24px] border border-slate-200 card-shadow p-7 lg:p-8">
+      <div class="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-brand-600 uppercase"><span class="w-6 h-[2px] bg-brand-600"></span> Professional Summary</div>
+      <h2 class="mt-3 text-[22px] font-extrabold tracking-tight text-brand-900 leading-tight">Turning data into decisions<br>and infrastructure into velocity.</h2>
+      <p class="mt-4 text-[14.5px] leading-7 text-slate-600">
+        Results-driven Data Analyst and Cloud enthusiast with PG-DBDA from <b>C-DAC ACTS Pune</b> and B.E. Computer Engineering. Hands-on across the full data lifecycle — from collection and processing to visualization and predictive modeling. Skilled in <b>AWS (EC2, Elastic Beanstalk, SNS)</b>, CI/CD pipelines, and ML model development. Adept at translating complex datasets into actionable business insights using Python, Tableau, and Spark.
+      </p>
+      <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+        <div class="rounded-xl bg-slate-50 border border-slate-200 py-3"><div class="text-sm font-extrabold text-brand-900">Pune</div><div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide">Based</div></div>
+        <div class="rounded-xl bg-slate-50 border border-slate-200 py-3"><div class="text-sm font-extrabold text-brand-900">English</div><div class="text-[11px] font-semibold text-slate-500">Hindi • Marathi</div></div>
+        <div class="rounded-xl bg-slate-50 border border-slate-200 py-3"><div class="text-sm font-extrabold text-brand-900">1st Place</div><div class="text-[11px] font-semibold text-slate-500">IAS Codefest '22</div></div>
+      </div>
+    </div>
+    <div class="bg-brand-900 rounded-[24px] p-7 lg:p-8 text-white relative overflow-hidden">
+      <div class="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+      <div class="relative">
+        <p class="text-[11px] font-bold tracking-[0.16em] text-white/60 uppercase">What I Do Best</p>
+        <ul class="mt-4 space-y-4">
+          <li class="flex gap-3"><span class="w-8 h-8 rounded-lg bg-white/10 grid place-items-center shrink-0"><i data-lucide="cloud" class="w-4 h-4"></i></span><div><div class="text-sm font-bold">Cloud & DevOps</div><div class="text-[13px] text-white/70 leading-5">EC2, CodePipeline/Build/Deploy, Nginx, PM2, multi-env (Dev/QA/PreProd/Prod)</div></div></li>
+          <li class="flex gap-3"><span class="w-8 h-8 rounded-lg bg-white/10 grid place-items-center shrink-0"><i data-lucide="bar-chart-3" class="w-4 h-4"></i></span><div><div class="text-sm font-bold">Data & ML</div><div class="text-[13px] text-white/70 leading-5">Pandas, Scikit-learn, XGBoost, SVM, PySpark — end-to-end pipelines</div></div></li>
+          <li class="flex gap-3"><span class="w-8 h-8 rounded-lg bg-white/10 grid place-items-center shrink-0"><i data-lucide="brain-circuit" class="w-4 h-4"></i></span><div><div class="text-sm font-bold">Deep Learning</div><div class="text-[13px] text-white/70 leading-5">PyTorch CNNs for emotion recognition on CK+48, HPC-ready preprocessing</div></div></li>
+        </ul>
+        <a href="mailto:rutuj@example.com" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white border border-white/20 rounded-full px-5 py-2.5 hover:bg-white hover:text-brand-900 transition">Contact me <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="max-w-[1160px] mx-auto px-6 lg:px-8 py-2">
+  <div class="flex items-end justify-between gap-4 mb-6">
+    <div>
+      <p class="text-[11px] font-bold tracking-[0.16em] text-brand-500 uppercase">Professional Experience</p>
+      <h2 class="text-[26px] font-extrabold tracking-tight text-white">Built for production, not just demos.</h2>
+    </div>
+    <span class="hidden sm:inline text-xs font-mono text-slate-400">Jan 2024 — Apr 2025</span>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-6">
+    <!-- IFAS -->
+    <div class="bg-white rounded-[24px] border border-slate-200 card-shadow p-6 lg:p-7 relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-600 to-accent"></div>
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex gap-3">
+          <div class="w-11 h-11 rounded-xl bg-brand-900 text-white grid place-items-center font-extrabold text-xs">IFAS</div>
+          <div>
+            <h3 class="font-extrabold text-[15px] text-brand-900 leading-tight">Data Analytics Intern</h3>
+            <p class="text-[13px] font-semibold text-slate-500">IFAS Pvt. Ltd. • Pune</p>
+          </div>
+        </div>
+        <span class="shrink-0 px-3 py-1 rounded-full bg-slate-900 text-white text-[11px] font-bold">Jan 2025 – Apr 2025</span>
+      </div>
+      <ul class="mt-5 space-y-3 text-[13.5px] leading-6 text-slate-600 list-none">
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span><span>Architected end-to-end <b>CI/CD (GitHub → CodePipeline → CodeBuild → CodeDeploy → EC2 → PM2)</b> for 3-tier app (React frontend, React admin, Node.js backend) — zero manual deploys.</span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span><span>Provisioned Ubuntu EC2 (Node LTS v18, PM2, Nginx, CodeDeploy agent) at <code class="px-1.5 py-0.5 rounded bg-slate-100 border text-xs">/var/www/{frontend,admin,backend}</code></span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span><span>Nginx reverse proxy (<code class="px-1 py-0.5 rounded bg-slate-100 border text-xs">/→3000</code> <code class="px-1 py-0.5 rounded bg-slate-100 border text-xs">/admin→3001</code> <code class="px-1 py-0.5 rounded bg-slate-100 border text-xs">/api→4000</code>) — clean URLs, no exposed ports.</span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span><span>Multi-env (Dev/QA/PreProd/Prod) with dedicated EC2, isolated pipelines, Git branching <code class="px-1 py-0.5 rounded bg-slate-100 border text-xs">develop→qa→preprod→main</code></span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span><span>PM2 ecosystem, auto-startup on reboot & zero-downtime restarts on CodeDeploy.</span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span><span>Hardened prod: HTTPS (Let's Encrypt), UFW, root login disabled, secrets via <code class="px-1 py-0.5 rounded bg-slate-100 border text-xs">.env</code></span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span><span class="text-slate-700">Fixed real incidents: Node v24↔React mismatch → LTS v18, corrupt node_modules, PM2 wrong dir.</span></li>
+      </ul>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <span class="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold">AWS</span>
+        <span class="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold">CodePipeline</span>
+        <span class="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold">Nginx</span>
+        <span class="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold">PM2</span>
+      </div>
+    </div>
+
+    <!-- Candent -->
+    <div class="bg-white rounded-[24px] border border-slate-200 card-shadow p-6 lg:p-7">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex gap-3">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500 to-pink-500 text-white grid place-items-center font-extrabold text-xs">CT</div>
+          <div>
+            <h3 class="font-extrabold text-[15px] text-brand-900 leading-tight">Software Developer Intern — Front End</h3>
+            <p class="text-[13px] font-semibold text-slate-500">Candent Technologies Pvt. Ltd. • Pune</p>
+          </div>
+        </div>
+        <span class="shrink-0 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 text-[11px] font-bold">Jan 2024 – Apr 2024</span>
+      </div>
+      <ul class="mt-5 space-y-3 text-[13.5px] leading-6 text-slate-600">
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span><span>Built responsive apps with <b>React.js & Next.js</b>, optimizing component rendering for faster loads.</span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span><span>Integrated <b>MongoDB</b> — schemas + RESTful APIs for dynamic content delivery.</span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span><span>Active in sprints: code reviews, UI/UX bug fixes, quality standards.</span></li>
+        <li class="flex gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span><span>Built reusable component libraries accelerating delivery across projects.</span></li>
+      </ul>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <span class="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold">React.js</span>
+        <span class="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold">Next.js</span>
+        <span class="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold">MongoDB</span>
+        <span class="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold">REST APIs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="max-w-[1160px] mx-auto px-6 lg:px-8 py-10">
+  <p class="text-[11px] font-bold tracking-[0.16em] text-brand-500 uppercase">Technical Skills</p>
+  <h2 class="text-[22px] font-extrabold tracking-tight text-white">A full-stack data toolkit.</h2>
+  <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+      <div class="w-9 h-9 rounded-xl bg-[#FFF1E6] border border-orange-200 grid place-items-center"><i data-lucide="cloud" class="w-4 h-4 text-orange-600"></i></div>
+      <h3 class="mt-3 font-bold text-sm text-brand-900">Cloud & DevOps</h3>
+      <p class="mt-2 text-xs leading-5 text-slate-600">AWS EC2, Elastic Beanstalk, SNS, CodePipeline, CodeBuild, S3, IAM, Auto Scaling</p>
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+      <div class="w-9 h-9 rounded-xl bg-[#EEF2FF] border border-indigo-200 grid place-items-center"><i data-lucide="code-2" class="w-4 h-4 text-indigo-600"></i></div>
+      <h3 class="mt-3 font-bold text-sm text-brand-900">Languages</h3>
+      <p class="mt-2 text-xs leading-5 text-slate-600">Python, R, Java (OOP), SQL, JavaScript, HTML/CSS</p>
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+      <div class="w-9 h-9 rounded-xl bg-[#ECFDF5] border border-emerald-200 grid place-items-center"><i data-lucide="database" class="w-4 h-4 text-emerald-600"></i></div>
+      <h3 class="mt-3 font-bold text-sm text-brand-900">Data & ML</h3>
+      <p class="mt-2 text-xs leading-5 text-slate-600">Pandas, NumPy, Scikit-learn, XGBoost, SVM, Logistic Regression, PySpark, Spark</p>
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+      <div class="w-9 h-9 rounded-xl bg-[#FCE7F3] border border-pink-200 grid place-items-center"><i data-lucide="brain" class="w-4 h-4 text-pink-600"></i></div>
+      <h3 class="mt-3 font-bold text-sm text-brand-900">Deep Learning</h3>
+      <p class="mt-2 text-xs leading-5 text-slate-600">PyTorch, CNN, Emotion Recognition (CK+48)</p>
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+      <div class="w-9 h-9 rounded-xl bg-[#EFF6FF] border border-blue-200 grid place-items-center"><i data-lucide="bar-chart-2" class="w-4 h-4 text-blue-600"></i></div>
+      <h3 class="mt-3 font-bold text-sm text-brand-900">Visualization</h3>
+      <p class="mt-2 text-xs leading-5 text-slate-600">Tableau, Power BI, Streamlit, Matplotlib, Seaborn</p>
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+      <div class="w-9 h-9 rounded-xl bg-[#F5F3FF] border border-violet-200 grid place-items-center"><i data-lucide="server" class="w-4 h-4 text-violet-600"></i></div>
+      <h3 class="mt-3 font-bold text-sm text-brand-900">Databases</h3>
+      <p class="mt-2 text-xs leading-5 text-slate-600">MySQL, MongoDB</p>
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+      <div class="w-9 h-9 rounded-xl bg-[#FEF2F2] border border-red-200 grid place-items-center"><i data-lucide="layers" class="w-4 h-4 text-red-600"></i></div>
+      <h3 class="mt-3 font-bold text-sm text-brand-900">Web Frameworks</h3>
+      <p class="mt-2 text-xs leading-5 text-slate-600">React.js, Next.js</p>
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+      <div class="w-9 h-9 rounded-xl bg-slate-100 border border-slate-200 grid place-items-center"><i data-lucide="wrench" class="w-4 h-4 text-slate-700"></i></div>
+      <h3 class="mt-3 font-bold text-sm text-brand-900">Tools & Platforms</h3>
+      <p class="mt-2 text-xs leading-5 text-slate-600">Git, GitHub, Linux, Kaggle, Jupyter Notebook</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="max-w-[1160px] mx-auto px-6 lg:px-8 py-2">
+  <div class="flex items-end justify-between">
+    <div>
+      <p class="text-[11px] font-bold tracking-[0.16em] text-brand-500 uppercase">Academic Projects</p>
+      <h2 class="text-[26px] font-extrabold tracking-tight text-white">Selected work.</h2>
+    </div>
+    <a href="https://github.com/RutujC-137" target="_blank" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-900">View all on GitHub <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+  </div>
+
+  <div class="mt-6 grid lg:grid-cols-3 gap-6">
+    <!-- Project 1 -->
+    <article class="bg-white rounded-[24px] border border-slate-200 card-shadow overflow-hidden flex flex-col hover:translate-y-[-2px] transition">
+      <div class="h-36 bg-gradient-to-br from-[#0F2040] via-[#1E3A7A] to-[#00D1B2] p-5 flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+        <span class="inline-flex w-fit px-2.5 py-1 rounded-full bg-white/15 backdrop-blur text-white text-[11px] font-bold border border-white/20">1 Month • Featured</span>
+        <h3 class="relative text-white font-extrabold text-[16px] leading-tight">Lung Cancer Prediction</h3>
+      </div>
+      <div class="p-6 flex-1 flex flex-col">
+        <p class="text-[13px] font-semibold text-brand-700">Predictive Modeling & Analysis</p>
+        <p class="mt-2 text-[13.5px] leading-6 text-slate-600">Scalable pipeline with <b>Apache Spark</b> for large patient data, MySQL storage, and ML classifiers. Real-time predictions via Streamlit + Tableau dashboards.</p>
+        <div class="mt-4 flex flex-wrap gap-1.5">
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">PySpark</span>
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">XGBoost</span>
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">Streamlit</span>
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">Tableau</span>
+        </div>
+        <a href="https://github.com/RutujC-137/Lung_Cancer_Prediction" target="_blank" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-700 hover:text-brand-900">View repository <i data-lucide="external-link" class="w-4 h-4"></i></a>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="bg-white rounded-[24px] border border-slate-200 card-shadow overflow-hidden flex flex-col hover:translate-y-[-2px] transition">
+      <div class="h-36 bg-gradient-to-br from-[#7C3AED] via-[#4F46E5] to-[#06B6D4] p-5 flex flex-col justify-between relative overflow-hidden">
+        <span class="inline-flex w-fit px-2.5 py-1 rounded-full bg-white/15 backdrop-blur text-white text-[11px] font-bold border border-white/20">6 Months • B.E. Final Year</span>
+        <h3 class="text-white font-extrabold text-[16px] leading-tight">Novel Ensembled Approach to Genomic Data</h3>
+      </div>
+      <div class="p-6 flex-1 flex flex-col">
+        <p class="text-[13px] font-semibold text-violet-700">Early-stage Diabetes Prediction</p>
+        <p class="mt-2 text-[13.5px] leading-6 text-slate-600">Novel ensemble ML model on genomic data — combined multiple classifiers to boost diagnostic accuracy and healthcare outcomes.</p>
+        <div class="mt-4 flex flex-wrap gap-1.5">
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">Ensemble Methods</span>
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">Python</span>
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">Genomics</span>
+        </div>
+        <a href="https://github.com/RutujC-137/Novel-Ensembled-Approach-to-Genomic-Data-B.E-Project" target="_blank" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-violet-700 hover:text-violet-900">View repository <i data-lucide="external-link" class="w-4 h-4"></i></a>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="bg-white rounded-[24px] border border-slate-200 card-shadow overflow-hidden flex flex-col hover:translate-y-[-2px] transition">
+      <div class="h-36 bg-gradient-to-br from-[#BE123C] via-[#EA580C] to-[#FACC15] p-5 flex flex-col justify-between relative overflow-hidden">
+        <span class="inline-flex w-fit px-2.5 py-1 rounded-full bg-white/15 backdrop-blur text-white text-[11px] font-bold border border-white/20">4 Months • Deep Learning</span>
+        <h3 class="text-white font-extrabold text-[16px] leading-tight">Facial Recognition using CNN</h3>
+      </div>
+      <div class="p-6 flex-1 flex flex-col">
+        <p class="text-[13px] font-semibold text-rose-700">Emotion Detection — PyTorch</p>
+        <p class="mt-2 text-[13.5px] leading-6 text-slate-600">Custom CNN on <b>CK+48</b> (anger, contempt, surprise…). Pipeline: grayscale, resizing, one-hot encoding, 10-epoch training + classification report.</p>
+        <div class="mt-4 flex flex-wrap gap-1.5">
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">PyTorch</span>
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">CNN</span>
+          <span class="px-2 py-1 rounded-full bg-slate-50 border text-[11px] font-semibold">CK+48</span>
+        </div>
+        <a href="https://github.com/RutujC-137/Facial-Recognition" target="_blank" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-rose-700 hover:text-rose-900">View repository <i data-lucide="external-link" class="w-4 h-4"></i></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="max-w-[1160px] mx-auto px-6 lg:px-8 py-10">
+  <p class="text-[11px] font-bold tracking-[0.16em] text-brand-500 uppercase">Education</p>
+  <h2 class="text-[22px] font-extrabold tracking-tight text-white">Learning, formalized.</h2>
+  <div class="mt-6 grid lg:grid-cols-[1.2fr_0.8fr] gap-6">
+    <div class="space-y-4">
+      <div class="bg-white rounded-2xl border border-slate-200 p-7 lg:p-8 flex gap-5 items-start card-shadow">
+        <div class="w-14 h-14 rounded-xl bg-brand-900 text-white grid place-items-center font-bold text-sm shrink-0">C-DAC</div>
+        <div class="flex-1">
+          <div class="flex flex-wrap items-start justify-between gap-2">
+            <h3 class="font-bold text-[17px] text-brand-900">PG-DBDA — Big Data Analytics</h3>
+            <span class="px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold">Feb 2025 • 198/320</span>
+          </div>
+          <p class="text-[13px] font-medium text-slate-500">C-DAC — Advanced Computing Training School (ACTS), Pune</p>
+          <p class="mt-2 text-[13.5px] leading-6 text-slate-600">Key Modules: Linux & Cloud Computing (29/40), Data Visualization (28/40), Big Data Technologies (26/40), Practical ML (26/40)</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-200 p-7 lg:p-8 flex gap-5 items-start card-shadow">
+        <div class="w-14 h-14 rounded-xl bg-slate-900 text-white grid place-items-center font-bold text-sm shrink-0">SPPU</div>
+        <div class="flex-1">
+          <div class="flex flex-wrap items-start justify-between gap-2">
+            <h3 class="font-bold text-[17px] text-brand-900">B.E. — Computer Engineering</h3>
+            <span class="px-3 py-1.5 rounded-full bg-white border text-xs font-bold text-slate-700">2024 • 70.3% First Division</span>
+          </div>
+          <p class="text-[13px] font-medium text-slate-500">MES College of Engineering — Savitribai Phule Pune University</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl border border-slate-200 p-4 card-shadow">
+          <p class="text-xs font-bold text-brand-900">XII — Science • 2020</p>
+          <p class="text-xs text-slate-500">Modern College, Maharashtra — 65.23%</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-4 card-shadow">
+          <p class="text-xs font-bold text-brand-900">X — General • 2018</p>
+          <p class="text-xs text-slate-500">Alphonsa High School — 81.4% First Division</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-gradient-to-br from-brand-900 to-brand-700 rounded-2xl p-6 text-white">
+        <h3 class="font-bold text-sm flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> Certifications & Achievements</h3>
+        <ul class="mt-4 space-y-3 text-sm leading-5 text-white/90">
+          <li class="flex gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span><span><b>Kaggle</b> — Intro to Machine Learning (Certified)</span></li>
+          <li class="flex gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-yellow-300 shrink-0"></span><span><b>1st Place</b> — Integral Ad Science Codefest 2022</span></li>
+          <li class="flex gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white shrink-0"></span><span><b>3rd Position</b> — Robo Race (Line Following) — Roboclub MESCOE</span></li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 card-shadow">
+        <h3 class="font-bold text-sm text-brand-900">Personal</h3>
+        <div class="mt-3 space-y-2 text-xs text-slate-600">
+          <p><span class="font-semibold text-slate-800">Languages:</span> Marathi, Hindi, English</p>
+          <p><span class="font-semibold text-slate-800">Nationality:</span> Indian</p>
+          <p><span class="font-semibold text-slate-800">Hobbies:</span> Learning, Gaming, Reading, Football</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact" class="mt-4">
+  <div class="max-w-[1160px] mx-auto px-6 lg:px-8 pb-10">
+    <div class="bg-brand-900 rounded-[28px] p-7 lg:p-10 text-white relative overflow-hidden">
+      <div class="absolute -top-20 -right-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl"></div>
+      <div class="relative grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
+        <div>
+          <h2 class="text-[28px] lg:text-[32px] font-extrabold tracking-tight leading-tight">Let’s build something<br><span class="text-accent">data-driven.</span></h2>
+          <p class="mt-3 text-[14px] leading-6 text-white/70 max-w-[480px]">Open to Data Analyst, Cloud DevOps and ML Engineer roles. If you have a dataset, a pipeline to ship, or a model to productionize — I’d love to talk.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="mailto:rutuj.gangawane@example.com" class="px-6 py-3 rounded-full bg-white text-brand-900 font-bold text-sm inline-flex items-center gap-2 hover:bg-slate-100 transition"><i data-lucide="mail" class="w-4 h-4"></i> Email me</a>
+            <a href="https://linkedin.com/in/rutuj-gangawane" target="_blank" class="px-6 py-3 rounded-full bg-white/10 border border-white/20 font-semibold text-sm inline-flex items-center gap-2 hover:bg-white/15 transition"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a>
+            <a href="https://github.com/RutujC-137" target="_blank" class="px-6 py-3 rounded-full bg-white/10 border border-white/20 font-semibold text-sm inline-flex items-center gap-2 hover:bg-white/15 transition"><i data-lucide="github" class="w-4 h-4"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 text-slate-800">
+          <h3 class="font-bold text-sm text-brand-900">Quick contact</h3>
+          <form onsubmit="event.preventDefault(); alert('Thanks for reaching out! Please contact via LinkedIn or GitHub for now.');">
+            <input placeholder="Your name" class="mt-4 w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm outline-none focus:border-brand-500 focus:bg-white transition" required>
+            <input placeholder="Your email" type="email" class="mt-3 w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm outline-none focus:border-brand-500 focus:bg-white transition" required>
+            <textarea placeholder="Tell me about your project..." rows="3" class="mt-3 w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm outline-none focus:border-brand-500 focus:bg-white transition resize-none"></textarea>
+            <button type="submit" class="mt-3 w-full py-3 rounded-xl bg-brand-900 text-white font-bold text-sm hover:bg-brand-800 transition flex items-center justify-center gap-2">Send message <i data-lucide="send" class="w-4 h-4"></i></button>
+          </form>
+          <p class="mt-3 text-[11px] text-center text-slate-400">Form is demo — use LinkedIn/GitHub for delivery.</p>
+        </div>
+      </div>
+      <div class="relative mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/60">
+        <span>© 2026 Rutuj Gangawane</span>
+        <span class="font-mono flex items-center gap-2">
+          <a href="https://linkedin.com/in/rutuj-gangawane" target="_blank" class="hover:text-white hover:underline underline-offset-4">linkedin.com/in/rutuj-gangawane</a>
+          <span>•</span>
+          <a href="https://github.com/RutujC-137" target="_blank" class="hover:text-white hover:underline underline-offset-4">github.com/RutujC-137</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  document.querySelectorAll('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>menu.classList.add('hidden')));
+  // navbar shadow on scroll
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY>8) nav.classList.add('shadow-sm'); else nav.classList.remove('shadow-sm');
+  });
+</script>
+</body>
+</html>
