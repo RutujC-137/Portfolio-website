@@ -76,6 +76,8 @@ html.light .decoration-white\/20{ text-decoration-color:#d4d4d8 !important; }
 html.light .card-glow{ box-shadow:0 1px 3px rgba(0,0,0,0.06),0 4px 12px rgba(0,0,0,0.04) !important; }
 html.light #anim-rutuj{ color:#18181b !important; -webkit-text-fill-color:#18181b !important; }
 html.light .animated-gradient, html.light #anim-gangawane, html.light #anim-gangawane .letter{ color:#18181b !important; -webkit-text-fill-color:#18181b !important; background:none !important; filter:none !important; }
+html.light footer .bg-white{ background:#18181b !important; color:#fff !important; border-color:#18181b !important; }
+html.light footer .bg-white:hover{ background:#000 !important; }
 </style>
 </head>
 <body class="bg-black text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
@@ -495,7 +497,7 @@ html.light .animated-gradient, html.light #anim-gangawane, html.light #anim-gang
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="mailto:rutuj.gangawane@example.com" class="px-6 py-3 rounded-full bg-white text-black font-bold text-sm inline-flex items-center gap-2 hover:bg-zinc-100 transition"><i data-lucide="mail" class="w-4 h-4"></i> Email me</a>
             <a href="https://linkedin.com/in/rutuj-gangawane" target="_blank" class="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-semibold text-sm inline-flex items-center gap-2 hover:bg-white/10 transition"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a>
-            <a href="https://github.com/RutujC-137" target="_blank" class="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-semibold text-sm inline-flex items-center gap-2 hover:bg-white/10 transition"><i data-lucide="github" class="w-4 h-4"></i> GitHub</a>
+            <a href="https://github.com/RutujC-137" target="_blank" class="px-6 py-3 rounded-full bg-white text-black font-bold text-sm inline-flex items-center gap-2 hover:bg-zinc-100 transition"><i data-lucide="github" class="w-4 h-4"></i> GitHub</a>
           </div>
         </div>
         <div class="bg-white rounded-2xl p-5 text-zinc-800">
@@ -564,6 +566,18 @@ function splitLetters(id, delayStep=70, baseDelay=300){
 }
 splitLetters('anim-rutuj', 80, 200);
 splitLetters('anim-gangawane', 70, 500);
+// fix FormSubmit file:// issue - use mailto when opened as local file
+document.getElementById('contactForm')?.addEventListener('submit', function(e){
+  if(location.protocol === 'file:'){
+    e.preventDefault();
+    const fd=new FormData(this);
+    const subject=encodeURIComponent(fd.get('_subject')||'Portfolio Contact');
+    const body=encodeURIComponent('Name: '+(fd.get('name')||'')+'\nEmail: '+(fd.get('email')||'')+'\n\n'+(fd.get('message')||''));
+    window.location.href='mailto:rutuj.02gangawane@gmail.com?subject='+subject+'&body='+body;
+    // also show hint
+    setTimeout(()=> alert('Opened as file — using your email app. On https://rutujc-137.github.io/Portfolio-website/ it sends directly to rutuj.02gangawane@gmail.com'), 300);
+  }
+});
 </script>
 </body>
 </html>
