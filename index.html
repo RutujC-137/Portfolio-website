@@ -14,14 +14,14 @@
 tailwind.config={
   theme:{
     extend:{
-      fontFamily:{ sans:['Plus Jakarta Sans','sans-serif'], display:['Instrument Serif','serif'], mono:['JetBrains Mono','monospace']},
+      fontFamily:{ sans:['Calibri','Segoe UI','sans-serif'], display:['Instrument Serif','serif'], mono:['Calibri','monospace']},
       colors:{ brand:{900:'#1C1917',800:'#292524',700:'#57534E',600:'#D97757',500:'#E8A082',400:'#F5D0B8'}, accent:'#D97757', violet:'#A16207', cream:'#FDFCF8', stone:{50:'#FDFCF8',100:'#F5F5F4',200:'#E7E5E4',800:'#292524',900:'#1C1917'} }
     }
   }
 }
 </script>
 <style>
-body{ font-family: 'Plus Jakarta Sans', system-ui, sans-serif; } h1,h2,h3{ font-family: 'Instrument Serif', Georgia, serif; } .font-display{ font-family: 'Instrument Serif', Georgia, serif !important; }
+body{ font-family: Calibri, 'Segoe UI', Arial, sans-serif; } h1,h2,h3{ font-family: Calibri, 'Segoe UI', sans-serif; } .font-display{ font-family: Calibri, 'Segoe UI', sans-serif !important; } #anim-rutuj, #anim-gangawane{ font-family: 'Instrument Serif', Georgia, serif !important; }
 *{scrollbar-width:thin;scrollbar-color:#D97757 #FDFCF8}
 ::-webkit-scrollbar{width:8px;height:8px}
 ::-webkit-scrollbar-track{background:#FDFCF8}
@@ -580,7 +580,7 @@ html:not(.light) .card, html:not(.light) [class*="rounded-2xl"], html:not(.light
             <textarea name="message" placeholder="Tell me about your project..." rows="3" class="mt-3 w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-300 text-sm outline-none focus:border-zinc-900 focus:bg-white transition resize-none" required></textarea>
             <button type="submit" class="mt-3 w-full py-3 rounded-xl bg-black text-white font-bold text-sm hover:bg-zinc-800 transition flex items-center justify-center gap-2">Send message <i data-lucide="send" class="w-4 h-4"></i></button>
           </form>
-          <p class="mt-3 text-[11px] text-center text-zinc-400">Sends directly to <a href="mailto:rutuj.02gangawane@gmail.com" class="underline hover:text-zinc-900">rutuj.02gangawane@gmail.com</a> — powered by FormSubmit</p>
+
         </div>
       </div>
       <div class="relative mt-8 pt-6 border-t border-white/25 flex flex-wrap items-center justify-between gap-4 text-xs text-white/30">
