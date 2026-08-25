@@ -50,6 +50,32 @@ tailwind.config={
 .reveal-name-delay{animation:textReveal .9s cubic-bezier(.16,1,.3,1) .2s both}
 .letter{ display:inline-block; opacity:0; animation: letterFloat .6s cubic-bezier(.16,1,.3,1) forwards; }
 #anim-gangawane .letter{ background:linear-gradient(100deg,#60A5FA 0%,#34D399 33%,#F472B6 66%,#60A5FA 100%); background-size:300% 100%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation: letterFloat .6s cubic-bezier(.16,1,.3,1) forwards, gradientShift 4s ease infinite, glowPulse 3s ease infinite; }
+/* LIGHT MODE OVERRIDES */
+html.light body{ background:#FCFCFD !important; color:#27272a !important; }
+html.light nav{ background:rgba(255,255,255,0.85) !important; border-color:#e4e4e7 !important; backdrop-filter:blur(12px) }
+html.light nav .text-white, html.light nav [class*="text-white"]{ color:#18181b !important; }
+html.light nav .text-white\/40{ color:#a1a1aa !important; }
+html.light nav .bg-white\/10{ background:#f4f4f5 !important; border-color:#e4e4e7 !important; }
+html.light .bg-black{ background:#FCFCFD !important; }
+html.light .grid-bg{ background-image: linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px) !important; }
+html.light .aurora::before{ background:radial-gradient(ellipse at center, rgba(0,0,0,0.04) 0%, transparent 70%) !important; }
+html.light .aurora::after{ background:radial-gradient(ellipse at center, rgba(0,0,0,0.03) 0%, transparent 70%) !important; }
+html.light [class*="bg-zinc-900"]{ background:#ffffff !important; border-color:#e4e4e7 !important; color:#18181b !important; }
+html.light [class*="bg-zinc-900"] .text-white{ color:#18181b !important; }
+html.light [class*="bg-zinc-900"] .text-white\/50, html.light [class*="bg-zinc-900"] .text-white\/40{ color:#71717a !important; }
+html.light .text-white{ color:#18181b !important; }
+html.light .text-white\/60{ color:#52525b !important; }
+html.light .text-white\/50{ color:#71717a !important; }
+html.light .text-white\/40{ color:#71717a !important; }
+html.light .text-white\/30{ color:#a1a1aa !important; }
+html.light .border-white\/10{ border-color:#e4e4e7 !important; }
+html.light .border-white\/5{ border-color:#e4e4e7 !important; }
+html.light .bg-white\/5{ background:#ffffff !important; border-color:#e4e4e7 !important; }
+html.light .bg-white\/10{ background:#f4f4f5 !important; }
+html.light .decoration-white\/20{ text-decoration-color:#d4d4d8 !important; }
+html.light .card-glow{ box-shadow:0 1px 3px rgba(0,0,0,0.06),0 4px 12px rgba(0,0,0,0.04) !important; }
+html.light #anim-rutuj{ color:#18181b !important; }
+html.light #anim-gangawane .letter{ filter:none !important; }
 </style>
 </head>
 <body class="bg-black text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
@@ -67,9 +93,11 @@ tailwind.config={
       <a href="#skills" class="hover:text-white transition">Skills</a>
       <a href="#projects" class="hover:text-white transition">Projects</a>
       <a href="#education" class="hover:text-white transition">Education</a>
+      <button id="themeToggle" aria-label="Toggle theme" class="w-9 h-9 rounded-full bg-white/10 border border-white/10 grid place-items-center hover:bg-white/15 transition text-white"><i data-lucide="sun" class="w-4 h-4 sun-icon"></i><i data-lucide="moon" class="w-4 h-4 moon-icon hidden"></i></button>
       <a href="Rutuj_Gangawane_Resume (1).pdf" download class="ml-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/10 text-white font-bold text-[13px] hover:bg-white/15 transition flex items-center gap-2"><i data-lucide="download" class="w-3.5 h-3.5"></i> Download CV</a>
       <a href="#contact" class="px-5 py-2.5 rounded-full bg-white text-black font-bold text-[13px] hover:bg-zinc-100 transition flex items-center gap-2">Let's Talk <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
     </div>
+    <button id="themeToggleMobile" aria-label="Toggle theme" class="md:hidden w-9 h-9 rounded-xl bg-white/5 border border-white/10 grid place-items-center text-white"><i data-lucide="sun" class="w-4 h-4 sun-m"></i><i data-lucide="moon" class="w-4 h-4 moon-m hidden"></i></button>
     <button id="menuBtn" class="md:hidden w-9 h-9 rounded-xl bg-white/5 border border-white/10 grid place-items-center"><i data-lucide="menu" class="w-5 h-5 text-white"></i></button>
   </div>
   <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-white/10 px-6 py-4 flex-col gap-3">
@@ -504,6 +532,20 @@ const nav=document.getElementById('navbar');
 window.addEventListener('scroll',()=>{ if(window.scrollY>10) nav.classList.add('bg-black/70'); else nav.classList.remove('bg-black/70'); });
 const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('in')})},{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// theme toggle
+const htmlEl=document.documentElement;
+const tBtn=document.getElementById('themeToggle'), tBtnM=document.getElementById('themeToggleMobile');
+function applyTheme(t){
+  if(t==='light'){ htmlEl.classList.add('light'); } else { htmlEl.classList.remove('light'); }
+  document.querySelectorAll('.sun-icon, .sun-m').forEach(el=> el.classList.toggle('hidden', t==='light'));
+  document.querySelectorAll('.moon-icon, .moon-m').forEach(el=> el.classList.toggle('hidden', t!=='light'));
+  lucide.createIcons();
+}
+const savedTheme=localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+applyTheme(savedTheme);
+function toggleTheme(){ const isLight=htmlEl.classList.contains('light'); const next=isLight?'dark':'light'; applyTheme(next); localStorage.setItem('theme', next); }
+tBtn?.addEventListener('click', toggleTheme);
+tBtnM?.addEventListener('click', toggleTheme);
 // letter stagger animation for Rutuj Gangawane
 function splitLetters(id, delayStep=70, baseDelay=300){
   const el=document.getElementById(id);
