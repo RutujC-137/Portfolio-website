@@ -101,6 +101,8 @@ html.light footer.bg-gradient-to-br{ background:#ffffff !important; }
 html.light #projectDeck .deck-card{ border-color:#e4e4e7 !important; }
 
   .scrollbar-hide{ -ms-overflow-style:none; scrollbar-width:none; } .scrollbar-hide::-webkit-scrollbar{ display:none; }
+  @keyframes blink{ 0%,50%{ opacity:1 } 51%,100%{ opacity:0 } }
+html.light #typedCursor{ background:#18181b !important; }
 </style>
 </head>
 <body class="bg-black text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
@@ -151,8 +153,8 @@ html.light #projectDeck .deck-card{ border-color:#e4e4e7 !important; }
             <span id="anim-gangawane" class="animated-gradient">Gangawane</span>
           </span>
         </h1>
-        <p class="mt-4 text-[15.5px] lg:text-[17px] leading-7 text-white/60 max-w-[640px] mx-auto text-center">
-          PG-DBDA <span class="text-white font-semibold">C-DAC ACTS</span> + B.E. Computer Engineering. I ship <span class="text-white">CI/CD on AWS</span>, turn raw data into dashboards, and deploy ML to production.
+        <p id="heroSubtitle" class="mt-4 text-[15.5px] lg:text-[17px] leading-7 text-white/60 max-w-[640px] mx-auto text-center min-h-[56px]">
+          <span id="typedText"></span><span id="typedCursor" class="inline-block w-[2px] h-[1.1em] bg-white/70 ml-1 align-middle animate-pulse" style="animation: blink 1s step-end infinite;"></span>
         </p>
 
 
@@ -614,6 +616,32 @@ function splitLetters(id, delayStep=70, baseDelay=300){
   });
 }
 splitLetters('anim-rutuj', 80, 200);
+  // ChatGPT-like typing for hero subtitle
+  (function(){
+    const fullText = "Hello there! PG-DBDA C-DAC ACTS + B.E. Computer Engineering. I ship CI/CD on AWS, turn raw data into dashboards, and deploy ML to production.";
+    const el = document.getElementById('typedText');
+    const cursor = document.getElementById('typedCursor');
+    if(!el) return;
+    let i=0;
+    function type(){
+      if(i < fullText.length){
+        // handle bold parts: wrap PG-DBDA C-DAC ACTS and CI/CD on AWS in spans for emphasis after typing?
+        // For typing effect, just append char
+        el.textContent += fullText.charAt(i);
+        i++;
+        setTimeout(type, 18 + Math.random()*22);
+      } else {
+        // done - add bold styling to key phrases
+        const html = el.textContent
+          .replace('PG-DBDA C-DAC ACTS', '<span class="text-white font-semibold">PG-DBDA C-DAC ACTS</span>')
+          .replace('CI/CD on AWS', '<span class="text-white">CI/CD on AWS</span>');
+        el.innerHTML = html;
+        if(cursor) cursor.style.display='none';
+      }
+    }
+    // start after name animation
+    setTimeout(type, 900);
+  })();
 splitLetters('anim-gangawane', 70, 500);
 // Tinder deck - stacked, loop, swipe right=next, left=prev (mouse + thumb)
 (function(){
